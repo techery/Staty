@@ -24,6 +24,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
 }
 
 dependencies {
@@ -32,9 +37,14 @@ dependencies {
 
     apt 'org.immutables:value-standalone:1.0.1'
     compile 'org.immutables:value:1.0.1'
+    compile 'org.immutables:common:1.0.1'
 
     compile 'javax.annotation:jsr250-api:1.0'
 
     compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.5.1'
+
+    compile 'com.snappydb:snappydb-lib:0.5.0'
+    compile 'com.esotericsoftware.kryo:kryo:2.24.0'
 
 }
